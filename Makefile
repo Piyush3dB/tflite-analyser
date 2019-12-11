@@ -16,13 +16,10 @@ FLATC_PLACE=PLACE
 #
 # DO NOT EDIT
 #
-BUT_ROOT=$(PWD)/but
-
 
 .DEFAULT_GOAL := all
 .PHONY: info
 
-#$(BLENDER_EXE) -v
 
 info:
 	@echo "   "
