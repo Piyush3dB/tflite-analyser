@@ -28,9 +28,12 @@ info:
 	@echo "    FLATC = $(FLATC_INFO)"
 	@echo "   "
 
-venv: info
+pipup:
 	sudo python3.6 -m pip install --upgrade pip
+
+venv: info
 	virtualenv -p /usr/bin/python3.6 venv
+
 
 clean_venv: info
 	rm -rf ./venv
