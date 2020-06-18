@@ -14,3 +14,26 @@ pipenv install
 
 
 ```
+
+
+
+Install flatc
+
+solution for flatc and flatbuffers for linux ubuntu :
+
+```
+choice "folder for installation"
+cd "folder for installation"
+git clone https://github.com/google/flatbuffers.git
+cd flatbuffers
+cmake -G "Unix Makefiles"
+make
+sudo ln -s /full-path-to-flatbuffer/flatbuffers/flatc /usr/local/bin/flatc
+chmod +x /full-path-to-flatbuffer/flatbuffers/flatc
+run in any place as "flatc"
+```
+
+Git/tflite-analyser$ flatc --version
+flatc version 1.12.0
+
+

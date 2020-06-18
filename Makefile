@@ -38,8 +38,10 @@ venv: info
 clean_venv: info
 	rm -rf ./venv
 	
-fbs_api: info
+fbs: info
 	./download_schema.sh
 
+clean:
+	rm -rf ./schema
 
 all: info
