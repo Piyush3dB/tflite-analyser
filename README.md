@@ -9,8 +9,7 @@ rm -rf venv
 sudo python3.6 -m pip install --upgrade pip
 virtualenv -p /usr/bin/python3.6 venv
 source ./venv/bin/activate
-pip install pipenv
-pipenv install
+pip install -r requirements.txt
 
 
 ```
@@ -36,4 +35,12 @@ run in any place as "flatc"
 Git/tflite-analyser$ flatc --version
 flatc version 1.12.0
 
+
+
+pip install flatbuffers
+pip install tensorflow==1.14.0
+pip install numpy==1.16.1
+
+
+pip install -r requirements.txt
 

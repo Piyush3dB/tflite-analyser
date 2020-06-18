@@ -31,17 +31,20 @@ info:
 venv: info
 	sudo python3.6 -m pip install --upgrade pip
 	virtualenv -p /usr/bin/python3.6 venv
-	source ./venv/bin/activate
-	pip install pipenv
-	pipenv install
 
 clean_venv: info
 	rm -rf ./venv
 	
 fbs: info
-	./download_schema.sh
+	rm -rf schema.fbs;
+	wget https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/lite/schema/schema.fbs;
+	flatc --version;
+	flatc --python schema.fbs;
 
 clean:
 	rm -rf ./schema
+
+clean_venv:
+	rm -rf ./venv
 
 all: info
